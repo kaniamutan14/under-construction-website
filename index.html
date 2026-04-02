@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>A BEAUTIFUL DISASTER | Structured Chaos</title>
+  <meta name="description" content="A Highly Interactive Under Construction Website. Digital Dumpster Fire included."/>
+  <meta property="og:title" content="A BEAUTIFUL DISASTER | Structured Chaos"/>
+  <meta property="og:description" content="A Highly Interactive Under Construction Website. Built with Structured Chaos."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://structuredchaos.example.com/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="A BEAUTIFUL DISASTER | Structured Chaos"/>
+  <meta name="twitter:description" content="A Highly Interactive Under Construction Website. Digital Dumpster Fire included."/>
+  <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet"/>
+  
+  <style>
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-image: 
+            radial-gradient(circle at 2px 2px, #c2bb7b 1px, transparent 0);
+        background-size: 40px 40px;
+        overflow-x: hidden;
+    }
+    .glass-card {
+        background: rgba(243, 235, 145, 0.4);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .text-glow {
+        text-shadow: 0 0 20px rgba(255, 215, 9, 0.4);
+    }
+    .asymmetric-grid {
+        grid-template-columns: 1fr 1.5fr 1fr;
+    }
+  </style>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#f3eb91",
+            "tertiary-dim": "#963d00",
+            "surface-container-high": "#f9f19b",
+            "on-tertiary-fixed-variant": "#642600",
+            "on-tertiary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed": "#c0d1ff",
+            "on-primary-fixed-variant": "#665500",
+            "on-tertiary-fixed": "#2f0e00",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fffbff",
+            "tertiary-fixed-dim": "#ff7f36",
+            "on-surface": "#3d3905",
+            "on-secondary-container": "#00429c",
+            "error-dim": "#b92902",
+            "surface-tint": "#776300",
+            "surface": "#fffbff",
+            "primary-dim": "#695700",
+            "secondary-fixed-dim": "#acc3ff",
+            "inverse-on-surface": "#a59f61",
+            "surface-bright": "#fffbff",
+            "on-primary-container": "#5b4b00",
+            "surface-variant": "#f3eb91",
+            "on-background": "#3d3905",
+            "primary": "#776300",
+            "secondary-dim": "#0052be",
+            "primary-fixed": "#ffd709",
+            "on-secondary-fixed-variant": "#004baf",
+            "inverse-primary": "#ffd709",
+            "tertiary-container": "#ff955e",
+            "primary-fixed-dim": "#efc900",
+            "tertiary-fixed": "#ff955e",
+            "outline-variant": "#c2bb7b",
+            "on-tertiary-container": "#562000",
+            "surface-container-low": "#fffae1",
+            "on-surface-variant": "#6b662f",
+            "inverse-surface": "#100f00",
+            "error": "#be2d06",
+            "on-error": "#ffffff",
+            "surface-container": "#fef6a5",
+            "surface-dim": "#eee686",
+            "on-secondary-fixed": "#003076",
+            "secondary": "#005ed6",
+            "tertiary": "#a94600",
+            "on-primary-fixed": "#453900",
+            "on-error-container": "#520c00",
+            "primary-container": "#ffd709",
+            "on-primary": "#ffffff",
+            "secondary-container": "#c0d1ff",
+            "outline": "#878248",
+            "error-container": "#f95630"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-container overflow-x-hidden relative">
+  
+<div id="puddle-container" class="fixed bottom-0 left-0 w-full z-10 pointer-events-none flex items-end justify-center"></div>
+
+<div id="app" class="relative z-20">
+<!-- PAGE 1: THE PLAYGROUND -->
+  <div id="page-playground" class="page active flex-col w-full min-h-screen">
+      <!-- Top Navigation Anchor -->
+      <nav class="w-full top-0 sticky z-50 bg-[#fffbff]/90 backdrop-blur-md dark:bg-[#3d3905]/90">
+          <div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+              <div class="text-2xl font-black text-[#3d3905] dark:text-[#fffae1] uppercase tracking-tighter">A BEAUTIFUL DISASTER</div>
+              <div class="hidden md:flex gap-8 items-center font-['Plus_Jakarta_Sans'] font-bold tracking-tight">
+<a class="btn-trap text-[#005ed6] dark:text-[#acc3ff] border-b-4 border-[#ffd709] hover:scale-105 transition-transform duration-200 cursor-pointer active:scale-95" href="#">Our Vision</a>
+<a class="btn-trap text-[#6b662f] dark:text-[#c2bb7b] hover:scale-105 transition-transform duration-200 cursor-pointer active:scale-95" href="#">The Mess</a>
+<a class="btn-trap text-[#6b662f] dark:text-[#c2bb7b] hover:scale-105 transition-transform duration-200 cursor-pointer active:scale-95" href="#">Sneak Peek</a>
+              </div>
+              <button class="btn-trap bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-105 transition-transform duration-200 active:scale-95">Notify Me</button>
+          </div>
+      </nav>
+
+      <main class="relative min-h-screen px-4 md:px-24 pt-12">
+          <!-- Abstract Debris Background Elements -->
+          <div class="absolute top-20 -left-20 w-64 h-64 bg-secondary-fixed-dim rounded-full opacity-30 mix-blend-multiply blur-3xl -z-10"></div>
+          <div class="absolute top-40 right-10 w-48 h-48 bg-tertiary-container rounded-full opacity-40 mix-blend-multiply blur-2xl -z-10"></div>
+          <div class="absolute bottom-1/4 left-1/3 w-80 h-80 bg-primary-container rounded-full opacity-20 mix-blend-multiply blur-[100px] -z-10"></div>
+          
+          <!-- Floating 3D-Style Geometric Shapes -->
+          <div class="hidden md:flex items-center justify-center w-32 h-32 absolute top-60 right-24 rotate-12 scale-150 glass-card rounded-lg shadow-xl">
+              <span class="material-symbols-outlined text-secondary text-6xl" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+          </div>
+          <div class="hidden md:flex items-center justify-center w-24 h-24 absolute top-[600px] left-12 -rotate-12 scale-110 glass-card rounded-full shadow-lg border border-outline-variant/20">
+              <span class="material-symbols-outlined text-tertiary text-5xl" style="font-variation-settings: 'FILL' 1;">category</span>
+          </div>
+
+          <!-- Hero Section -->
+          <section class="max-w-5xl mx-auto flex flex-col items-center text-center relative z-10">
+              <div class="mb-6 inline-flex items-center gap-2 bg-tertiary text-on-tertiary px-6 py-2 rounded-full font-bold uppercase tracking-widest text-xs animate-bounce">
+                  <span class="material-symbols-outlined text-sm">construction</span>
+                  Active Site Explosion
+              </div>
+              <h1 class="text-5xl md:text-8xl font-black text-on-surface leading-[0.9] tracking-tighter mb-8 max-w-4xl">
+                  Wait, who left the <span id="lego-word" class="text-secondary underline decoration-primary-container decoration-8 underline-offset-8 cursor-pointer relative z-30">LEGOs</span> out?
+              </h1>
+              <p class="text-xl md:text-3xl text-on-surface-variant font-medium max-w-2xl mb-12 leading-tight">
+                  We just snagged this domain and we're currently in the middle of a <span class="text-primary italic font-black">creative explosion</span>. It's messy, it's weird, and it's going to be awesome.
+              </p>
+
+              <!-- Chaos Meter -->
+              <div id="chaos-meter-wrapper" class="w-full max-w-2xl bg-surface-container rounded-full p-2 mb-24 relative group cursor-pointer transition-transform duration-300">
+                  <div class="flex justify-between items-center mb-4 px-4 pointer-events-none">
+                      <span class="font-black uppercase tracking-tighter text-on-surface-variant text-sm flex items-center gap-2">
+                          <span class="material-symbols-outlined text-tertiary">bolt</span> Chaos Meter
+                      </span>
+                      <span id="chaos-percentage" class="font-black text-secondary text-2xl">68%</span>
+                  </div>
+                  <div class="h-12 w-full bg-surface-dim rounded-full overflow-hidden border-4 border-surface-container shadow-inner pointer-events-none relative z-10">
+                      <div id="chaos-bar" class="h-full w-[68%] bg-gradient-to-r from-secondary to-secondary-dim rounded-full relative overflow-hidden transition-all duration-500 ease-in-out">
+                          <div class="absolute inset-0 opacity-20 bg-[linear-gradient(45deg,rgba(255,255,255,0.4)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.4)_50%,rgba(255,255,255,0.4)_75%,transparent_75%,transparent)] bg-[length:40px_40px] animate-[moveBackground_2s_linear_infinite]"></div>
+                      </div>
+                  </div>
+                  <div id="chaos-tooltip" class="absolute -bottom-10 left-[68%] -translate-x-1/2 bg-on-surface text-surface px-3 py-1 rounded text-xs font-bold whitespace-nowrap transition-all duration-500 pointer-events-none">
+                      ALMOST THERE!
+                  </div>
+              </div>
+          </section>
+
+          <!-- Bento Sneak Peek Grid -->
+          <section class="max-w-7xl mx-auto mb-32 relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+<!-- Main Peek -->
+<div class="md:col-span-7 bg-surface-container-high rounded-lg p-12 overflow-hidden relative group btn-trap cursor-pointer">
+<div class="absolute top-0 right-0 p-6">
+<span class="bg-error text-on-error px-4 py-1 rounded-full font-black text-xs uppercase">Top Secret</span>
+</div>
+<div class="h-full flex flex-col justify-between relative z-10">
+<div>
+<h3 class="text-4xl font-black text-on-surface mb-4">The Vision Canvas</h3>
+<p class="text-lg text-on-surface-variant max-w-md">Our digital sketchbook where we throw ideas at the wall and see what sticks. Mostly it's just digital paint everywhere.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<div class="w-16 h-16 rounded-full bg-primary-container shadow-xl"></div>
+<div class="w-16 h-16 rounded-lg bg-secondary-fixed shadow-xl rotate-12"></div>
+<div class="w-16 h-16 rounded-2xl bg-tertiary-container shadow-xl -rotate-6"></div>
+</div>
+</div>
+<!-- Blurred Visual Content -->
+<div class="absolute bottom-0 right-0 w-1/2 h-full opacity-20 grayscale blur-xl group-hover:opacity-40 transition-opacity">
+<img alt="abstract messy artistic sketches with dynamic paint splatters and geometric shapes in a creative workspace" class="w-full h-full object-cover" data-alt="vibrant abstract digital painting with bold primary color splashes and overlapping geometric patterns against a soft textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsDqErJJJ1QIkdblqdKmvhipUXAfsb6h2oEb0wHyerj7aCYM9f_B-bzwArhYwEv52q4JDFgc7MmoUYWocn2nkdRb1QRRVE_9-wtzt3JKfrf2ar2K7jR9xPgNMxV8qfQoY0egb7fFFtCZtlMSmgErkzBAyxctzb47uHenKtUnKyTObnk4ssmd_qivrKKxFXVP8IFAsz5J7a_1VhO8BaR7o1Zimt6gIi1Wrht02cnOCPDsEWcRE9FD-AO2261vhIMXdIzmjfZwDQ-A"/>
+</div>
+</div>
+<!-- Small Peek 1 -->
+<div class="md:col-span-5 bg-secondary-container rounded-lg p-8 flex flex-col justify-between group overflow-hidden btn-trap cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">view_in_ar</span>
+<div>
+<h4 class="text-2xl font-black text-on-secondary-container mb-2 italic">Experimental Lab</h4>
+<p class="text-on-secondary-container/80 text-sm">Where we break physics for fun.</p>
+</div>
+<img alt="futuristic minimalist lab aesthetic with glowing blue lines and floating chrome spheres" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30 group-hover:scale-110 transition-transform duration-700" data-alt="minimalist white studio space with neon blue lighting accents and suspended architectural scale models" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_d8rAnIRfn--_1sXkvioGVX_D66RC2Tf0gcY8VW_uHbdUq-dggOrF68-xHqXHpNRcB1IH9w7tijeIjGiWgz1M-GhmE3gYgNfcbe42rURGFeUToixvNXbQ7DTML9P6AIn9SCFtTWQcIOFJbjuDem-exGHYuM23QyC7wUyCmjEhpbt59ivHVaKfyd71U71lVAFxO6ba_j88hQTrUpZ4n_3TZW0oT-InNfrmFDVjzdeuzUlx2WJyKLJz9ykWxrD4qPoBYURaIOUABAg"/>
+</div>
+<!-- Small Peek 2 -->
+<div class="md:col-span-4 bg-tertiary-container rounded-lg p-8 relative overflow-hidden min-h-[300px] btn-trap cursor-pointer">
+<h4 class="text-2xl font-black text-on-tertiary-container z-10 relative">The Vibe Check</h4>
+<p class="text-on-tertiary-container/80 z-10 relative mt-4">99% pure unfiltered joy. 1% caffeine jitters.</p>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-on-tertiary-container/10 rounded-full blur-2xl"></div>
+<span class="material-symbols-outlined absolute bottom-8 right-8 text-8xl text-on-tertiary-container/20 rotate-12" style="font-variation-settings: 'FILL' 1;">mood</span>
+</div>
+<!-- Wide Feature -->
+<div class="md:col-span-8 bg-surface-container-highest rounded-lg p-10 flex flex-col md:flex-row items-center gap-8 overflow-hidden btn-trap cursor-pointer">
+<div class="flex-1">
+<div class="bg-primary text-on-primary text-[10px] font-black px-2 py-0.5 rounded inline-block mb-4">SNEAK PEEK #04</div>
+<h4 class="text-3xl font-black text-on-surface mb-4">Interconnected Chaos</h4>
+<p class="text-on-surface-variant">We're building a network that behaves more like a ecosystem than a directory. It breathes. It grows. It might even talk back.</p>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-4 h-full">
+<div class="bg-surface-lowest p-4 rounded-xl shadow-sm -rotate-2">
+<img alt="complex mesh of glowing connected dots and lines in a dark void" class="w-full h-24 object-cover rounded blur-sm" data-alt="delicate spider-web like network of light filaments connecting glowing nodes against a warm golden backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7RrzcrJEegaIbQagh8x6S8JwIbqCaQ3KvXrxnQTqGbcQWBY_FG_zSWjbbiYPZQfm6YhjuS7K1kIwbcbfXO5ugtcRLWX-wcxWnu-jTipooFOudRxMkAhzWidmzrhyx1j0z1oCldHb_lM14fcO1xqdMP7IU46DTQrjxPhjy5YTB00NbvRJnAcGkVnGSiJYsdftPpMwW64gC0ZfhnZgFG4nI2enR-e0lBTQNGOh9rHjehZyJV__tIm-r-lfpZx5DGp45xXVxf4y8_I"/>
+</div>
+<div class="bg-surface-lowest p-4 rounded-xl shadow-sm rotate-3 mt-4">
+<img alt="organic green shapes growing and expanding like a digital moss" class="w-full h-24 object-cover rounded blur-sm" data-alt="microscopic close up of vibrant crystalline structures growing in fractals with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqCMCTxitJmh1Xwi1beahqYeddQbL5qY1pPnND_H4YSnWyIr62oSp74iunpHT74FjHJW4HL5v-peuQ7ewozLxQIZHU09hCKluhE_yt_5owDNH8pDDJKxXafcnXLB5SDRAaVhv7s7M1ozC2DsXdAkk85nQ3p4MOwxHdkW8xCW-7EUr_hXHj_xiefw5yz36kEjNSUS_qRqvmhtpTdw3ZbknJevOeDmHI_0_3-Ko7z2JqzpaiIW_dlYdmyYdNTvAx4xkrG6Zh8HgxcLg"/>
+</div>
+</div>
+</div>
+</div>
+          </section>
+
+          <!-- Newsletter Capture -->
+          <section class="max-w-4xl mx-auto mb-32 bg-on-surface text-surface rounded-xl p-8 md:p-16 relative overflow-hidden">
+              <div class="absolute top-0 right-0 w-32 h-32 bg-primary-container rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20"></div>
+              <div class="relative z-10 text-center">
+                  <h2 class="text-3xl md:text-5xl font-black mb-6 tracking-tighter">Want to be the first to see the mess when it's finished?</h2>
+                  <p class="text-[#fffae1]/90 mb-10 text-lg md:text-xl max-w-xl mx-auto">No spam, just a massive "Tada!" when we finally clear the LEGOs off the floor.</p>
+                  <form id="playground-newsletter-form" class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+                      <input id="playground-email" class="flex-grow h-16 px-8 rounded-full bg-surface-container-lowest text-on-surface border-none focus:ring-4 focus:ring-primary-container/30 transition-all font-bold text-lg" placeholder="your@email.com" type="email" required/>
+                      <button type="submit" class="h-16 px-10 rounded-full bg-primary-container text-on-primary-container font-black text-lg hover:scale-105 transition-transform active:scale-95 shadow-[0_8px_0_0_#776300]">
+                          HIT ME UP
+                      </button>
+                  </form>
+              </div>
+          </section>
+      </main>
+
+      <footer class="w-full mt-24 bg-[#fef6a5] dark:bg-[#3d3905]">
+          <div class="flex flex-col items-center justify-center px-12 py-10 w-full max-w-[1440px] mx-auto gap-6 z-20 relative">
+              <div class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-widest uppercase text-[#a94600] text-center">
+                  THIS PAGE WAS CONJURED BY AI ALGORITHMS. SEVERAL INNOCENT GIGABYTES OF RAM WERE HARMED IN THE MAKING.
+              </div>
+              <div class="flex gap-8">
+                  <a class="btn-roast font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-widest uppercase text-[#6b662f] hover:text-[#a94600] transition-colors underline decoration-2 underline-offset-4" href="#">Twitter</a>
+                  <a class="btn-roast font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-widest uppercase text-[#6b662f] hover:text-[#a94600] transition-colors underline decoration-2 underline-offset-4" href="#">Discord</a>
+                  <a class="btn-roast font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-widest uppercase text-[#6b662f] hover:text-[#a94600] transition-colors underline decoration-2 underline-offset-4" href="#">Privacy</a>
+              </div>
+          </div>
+      </footer>
+
+      <!-- Constructo-Pop Decorative Elements -->
+      <div class="fixed bottom-10 left-10 pointer-events-none select-none -rotate-12 opacity-50">
+          <div class="bg-primary-container px-4 py-2 rounded-lg font-black text-on-primary-container flex items-center gap-2 shadow-lg">
+              <span class="material-symbols-outlined">warning</span>
+              WATCH YOUR STEP
+          </div>
+      </div>
+  </div>
+
+
+
+  <!-- PAGE 2: THE ROAST PAGE (Imported Design) -->
+  <div id="page-roast" class="page hidden bg-surface relative min-h-screen z-30 flex flex-col">
+      <!-- TopNavBar -->
+      <nav class="w-full top-0 bg-[#fffbff]/90 backdrop-blur-md dark:bg-[#3d3905]/90 sticky z-50">
+          <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+          <div class="flex items-center gap-4 text-2xl font-black italic text-[#3d3905] dark:text-[#fffbff] tracking-tight">
+              <button id="btn-header-back" class="hover:scale-110 active:scale-95 transition-transform flex items-center justify-center p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10" aria-label="Go Back">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_back</span>
+              </button>
+              The Sandbox of Shame
+          </div>
+          <div class="hidden md:flex items-center gap-10 tracking-tight font-bold">
+              <a class="btn-roast text-[#005ed6] dark:text-[#acc3ff] border-b-4 border-[#ffd709] transition-transform hover:scale-105 active:scale-95 duration-150" href="#">The Breakdown</a>
+              <a class="btn-roast text-[#6b662f] dark:text-[#c2bb7b] hover:text-[#a94600] transition-transform hover:scale-105 active:scale-95 duration-150" href="#">Graveyard</a>
+              <a class="btn-roast text-[#6b662f] dark:text-[#c2bb7b] hover:text-[#a94600] transition-transform hover:scale-105 active:scale-95 duration-150" href="#">Manifesto</a>
+          </div>
+          <button class="btn-roast bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-primary/10">
+              Notify Me
+          </button>
+          </div>
+      </nav>
+
+      <main class="relative flex-grow">
+          <!-- Background Debris -->
+          <div class="absolute top-20 -left-20 w-64 h-64 bg-tertiary-container/30 rounded-full blur-3xl -z-10"></div>
+          <div class="absolute bottom-40 -right-20 w-80 h-80 bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+          
+          <!-- Hero Section -->
+          <section class="max-w-screen-xl mx-auto px-6 pt-24 pb-16 flex flex-col md:flex-row items-center gap-16">
+          <div class="flex-1 space-y-8 text-center md:text-left">
+              <div class="inline-block px-6 py-2 bg-tertiary text-on-tertiary rounded-full font-label text-sm uppercase tracking-[0.2em] font-black shadow-lg">
+                  Error 404: Your Competence Not Found
+              </div>
+              <h1 class="text-5xl md:text-8xl font-black text-on-background leading-[0.9] tracking-tighter">
+                  Hey Dummy, <span class="text-primary italic">do you think</span> this link works?
+              </h1>
+              <p class="text-xl md:text-2xl text-on-surface-variant font-medium max-w-2xl leading-relaxed">
+                  We literally just told you the site is under construction. What part of <span class="underline decoration-tertiary decoration-4 underline-offset-4 font-bold text-on-background">"Creative Explosion"</span> didn't you get? Go back to the sandbox.
+              </p>
+              <div class="pt-8 flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+                  <button id="btn-escape" class="px-10 py-5 bg-primary-container text-on-primary-container rounded-full text-xl font-black shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-4 group border-4 border-transparent hover:border-black/5">
+                      <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">keyboard_return</span>
+                      I'm Sorry, Take Me Back
+                  </button>
+                  <button class="btn-roast px-10 py-5 bg-secondary text-on-secondary rounded-full text-xl font-black hover:scale-105 active:scale-95 transition-all shadow-xl hover:shadow-2xl">
+                      Insult My Intelligence
+                  </button>
+              </div>
+          </div>
+          <!-- Asymmetric Visual Anchor -->
+          <div class="flex-1 relative hidden md:block">
+              <div class="relative bg-surface-container-highest rounded-xl p-4 rotate-3 shadow-2xl">
+              <img alt="Broken Lego" class="w-full h-[400px] object-cover rounded-md grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs7q_4pQnbc8G8Q0UxP_Y0QSKk55Uy9AUW5WhgW0lexcxT83gWzQzypABugdT6oT9djq3k9YeSvecojIUrsbV3jQJAnj4PalhcutooniGVO0COoz3ovPrSJjyEtUCYw1_zOiPLz44xq3f60akARR5JVUtskpT-QBbdyFqU68eAWvF4EqMfIKdBvmAMge7aEaIPRL5ZEp6lncpgRehKuocqn0OF52_CKBObRud6cH72-gVwjwLyUTm_XYt2CMF5iFD6p6XfIhuaYFE"/>
+              <div class="absolute -top-12 -right-12 bg-tertiary-container p-8 rounded-full shadow-xl rotate-12 flex items-center justify-center text-center">
+                  <span class="font-black text-on-tertiary-container text-xl leading-none">OOPS!<br/>CRASHED</span>
+              </div>
+              <div class="absolute -bottom-8 -left-8 bg-secondary-fixed p-6 rounded-lg shadow-xl -rotate-6 border-4 border-surface">
+                  <p class="font-bold text-on-secondary-fixed text-sm italic">"Truly a majestic failure."</p>
+                  <p class="text-[10px] uppercase font-black tracking-widest text-on-secondary-fixed opacity-70 mt-2"> - Sarcastic Architect</p>
+              </div>
+              </div>
+          </div>
+          </section>
+
+          <!-- Bento Grid "The Evidence" -->
+          <section class="bg-surface-container-low py-16 hidden md:block border-y-4 border-dashed border-outline-variant/30">
+          <div class="max-w-screen-xl mx-auto px-6">
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[200px]">
+              <div class="md:col-span-2 md:row-span-2 bg-surface-container-highest rounded-xl p-10 flex flex-col justify-end relative overflow-hidden group">
+                  <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-30 transition-opacity">
+                  <span class="material-symbols-outlined text-[120px]">construction</span>
+                  </div>
+                  <h3 class="text-4xl font-black mb-4">Under Construction Means NOT READY.</h3>
+                  <p class="text-on-surface-variant font-medium">In case the hammers, the orange cones, and the giant spinning gears didn't give it away, we are still painting the pixels.</p>
+              </div>
+              <div class="md:col-span-2 bg-primary-container rounded-xl p-8 flex items-center gap-8 relative overflow-hidden">
+                  <div class="w-24 h-24 bg-on-primary-container/10 rounded-full flex items-center justify-center">
+                  <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+                  </div>
+                  <div>
+                  <h4 class="font-black text-2xl">IQ Test Result:</h4>
+                  <p class="font-bold opacity-80">Link clicking on dead pages correlates with "I don't read."</p>
+                  </div>
+              </div>
+              <div class="bg-secondary text-on-secondary rounded-xl p-8 flex flex-col justify-between">
+                  <span class="material-symbols-outlined text-4xl">block</span>
+                  <p class="font-black uppercase text-xs tracking-widest">Access Denied</p>
+              </div>
+              <div class="bg-tertiary-container rounded-xl p-8 flex flex-col justify-between relative">
+                  <div class="absolute inset-0 bg-white/10 backdrop-blur-sm m-2 rounded-lg"></div>
+                  <span class="material-symbols-outlined text-4xl relative z-10 text-on-tertiary-container">history</span>
+                  <p class="font-black text-on-tertiary-container relative z-10">404 Times Clicked</p>
+              </div>
+              </div>
+          </div>
+          </section>
+
+          <!-- Newsletter / Insult Sign-up -->
+          <section class="max-w-screen-md mx-auto px-6 py-24 text-center">
+              <h2 class="text-4xl font-black mb-6">Want more disappointment?</h2>
+              <p class="text-xl text-on-surface-variant mb-10">Sign up for our newsletter where we notify you about links that definitely won't work either.</p>
+              <form id="roast-newsletter-form" class="flex flex-col sm:flex-row gap-4">
+                  <input id="roast-email" class="flex-1 bg-surface-container-lowest border-none rounded-full px-8 py-5 text-xl font-bold focus:ring-4 focus:ring-primary-container transition-all placeholder:text-on-surface-variant/30 shadow-inner" placeholder="you@dummy.com" type="email" required/>
+                  <button type="submit" class="bg-on-background text-surface py-5 px-10 rounded-full font-black text-xl hover:bg-primary hover:text-white transition-colors shadow-xl">
+                      Send Me Trash
+                  </button>
+              </form>
+          </section>
+      </main>
+  </div>
+</div>
+
+<!-- Sassy Modal for Buttons-->
+<div id="sassy-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-on-surface/80 backdrop-blur-md transition-opacity px-4">
+  <div class="modal-content relative bg-surface-container-highest p-12 max-w-lg w-full text-center rounded-[2rem] rounded-tr-[4rem] rounded-bl-[4rem] scale-90 transition-transform duration-300 shadow-[0_32px_64px_rgba(0,0,0,0.3)] border-4 border-outline-variant/20 overflow-hidden">
+      <!-- Decorative Debris inside the modal -->
+      <div class="absolute -top-10 -right-10 w-32 h-32 bg-error-container rounded-full mix-blend-multiply blur-2xl opacity-60 pointer-events-none"></div>
+      <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-secondary-container rounded-full mix-blend-multiply blur-2xl opacity-60 pointer-events-none"></div>
+      
+      <!-- Icon/Header -->
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-error text-on-error mb-6 shadow-xl rotate-12 relative z-10">
+          <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+      </div>
+
+      <h2 class="text-4xl font-black text-on-surface mb-4 leading-tight tracking-tighter relative z-10">Patience <br/><span class="text-error">Not Found.</span></h2>
+      <p class="text-lg text-on-surface-variant mb-2 font-bold uppercase tracking-widest text-xs relative z-10">Are your eyes painted on?</p>
+      <p class="text-xl text-on-surface font-medium mb-8 relative z-10">Didn't you read the first paragraph of the page?! We are <span class="bg-primary-container text-on-primary-container px-2 py-1 rounded inline-block -rotate-2 font-black">STILL BUILDING THIS!</span> Go touch some grass.</p>
+      
+      <button id="btn-close-modal" class="w-full px-8 py-4 bg-on-surface text-surface rounded-full font-black text-xl hover:scale-105 active:scale-95 transition-transform shadow-[0_8px_0_0_#100f00] relative z-10">I'm Sorry</button>
+  </div>
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-[#3d3905]/80 backdrop-blur-md transition-opacity">
+  <div class="modal-content bg-primary-container text-on-primary-container p-12 max-w-xl text-center rounded-3xl scale-90 transition-transform duration-300 shadow-2xl border-4 border-on-primary-container border-dashed">
+      <span class="material-symbols-outlined text-6xl mb-4 animate-bounce">send</span>
+      <h2 class="text-4xl font-black mb-4">Success! Sort of.</h2>
+      <p id="newsletter-email-display" class="text-xl font-bold italic mb-6 break-all">your email</p>
+      <p class="text-xl mb-10 font-medium">Has been successfully intercepted, printed onto receipt paper, and immediately tossed into a roaring digital fireplace.</p>
+      <button id="btn-close-newsletter" class="px-10 py-4 bg-on-primary-container text-primary-container rounded-full font-black text-xl hover:scale-105 hover:-rotate-3 transition-transform shadow-lg">Accept My Fate</button>
+  </div>
+</div>
+
+<script type="module" src="/main.js"></script>
+
+</body>
+</html>

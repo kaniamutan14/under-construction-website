@@ -1,0 +1,106 @@
+/* Anti-FOUC hidden state */
+body {
+  opacity: 0;
+}
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Custom CSS animations logic */
+
+.page {
+  display: none;
+  opacity: 0;
+}
+
+.page.active {
+  display: flex;
+  opacity: 1;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.modal-active-flex {
+  display: flex !important;
+}
+
+.modal-active-flex .modal-content {
+  transform: scale(1) !important;
+}
+
+/* Background gradient animation for the Chaos Meter */
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 0; }
+}
+
+/* New Glitch Error Animation replacing the harsh red */
+.glitch-error {
+  animation: glitch-skew 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both !important;
+  background: #ff955e !important; /* Tertiary container for a warning orange */
+  color: #2f0e00 !important; /* On tertiary fixed */
+  border: 2px solid #a94600 !important;
+  text-shadow: 2px 2px 0px rgba(0, 94, 214, 0.5), -2px -2px 0px rgba(190, 45, 6, 0.5) !important;
+  box-shadow: 0 0 20px rgba(255, 149, 94, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.5) !important;
+}
+
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  20% { transform: skew(-10deg) translateX(-5px); }
+  40% { transform: skew(10deg) translateX(5px); }
+  60% { transform: skew(-5deg) translateY(-2px); }
+  80% { transform: skew(5deg) translateY(2px); }
+  100% { transform: skew(0deg); }
+}
+
+/* Easter Egg 1: LEGO Physics */
+.lego-falling {
+  display: inline-block;
+  animation: fall 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0); }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Easter Egg 2: Fluid Leaking */
+.meter-broken {
+    transform-origin: 20% center;
+    animation: break-apart 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+    box-shadow: 10px 15px 25px rgba(0,0,0,0.3) !important;
+}
+
+@keyframes break-apart {
+    0% { transform: rotate(0) translateY(0); }
+    40% { transform: rotate(-8deg) translateY(-10px); }
+    100% { transform: rotate(25deg) translateY(40px); opacity: 0.9; }
+}
+
+.fluid-drop {
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    background: #005ed6; /* Secondary blue colour matching the bar */
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    pointer-events: none;
+    z-index: 15;
+    animation: dropFall 1.2s ease-in forwards;
+    filter: drop-shadow(0 0 5px rgba(0, 94, 214, 0.8));
+}
+
+@keyframes dropFall {
+    0% {
+        transform: translateY(0) scale(1) scaleY(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scaleX(0.5) scaleY(2);
+        opacity: 0;
+    }
+}
