@@ -32,3 +32,4 @@ stitch_source.html
 
 # Unused Vite boilerplate (project uses root-level index.html/main.js instead)
 src/
+.env
