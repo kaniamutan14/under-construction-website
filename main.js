@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const roastBtns = document.querySelectorAll('.btn-roast');
         roastBtns.forEach(btn => {
             btn.classList.remove('glitch-error');
-            if(btn.getAttribute('data-original-text')) {
-                btn.innerHTML = btn.getAttribute('data-original-text');
+            if (btn.getAttribute('data-original-text')) {
+                btn.textContent = btn.getAttribute('data-original-text');
             }
             btn.dataset.clicks = 0;
         });
