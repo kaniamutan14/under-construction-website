@@ -16,7 +16,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed before proceeding.
 
 1. Clone or download this repository to your local machine:
    ```bash
-   git clone <your-repository-url-here>
+   git clone <repository-url-here>
    cd <repository-directory>
    ```
 
